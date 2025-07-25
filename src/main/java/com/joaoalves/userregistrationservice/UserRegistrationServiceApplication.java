@@ -12,6 +12,7 @@ public class UserRegistrationServiceApplication {
         ApplicationContext context = SpringApplication.run(UserRegistrationServiceApplication.class, args);
         var userService = context.getBean(UserService.class);
         userService.registerUser(new User(1L, "joaoalves1102@outlook.pt", "joao", "João Alves"));
+
     }
 
 }

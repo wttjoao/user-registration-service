@@ -13,6 +13,6 @@ public class EmailNotificationService implements NotificationService {
 
     @Override
     public void send(String message, String recipientEmail) {
-        System.out.println("Host: " + host + ", Port: " + port + " - " + message);
+        System.out.println("Host: " + host + ", Port: " + port + " - " + message + " - " + recipientEmail);
     }
 }

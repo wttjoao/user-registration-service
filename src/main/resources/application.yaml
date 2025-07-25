@@ -2,5 +2,5 @@ spring:
   application:
     name: UserRegistrationService
 mail:
-  host: http
+  host: http://www.user-regist.com
   port: 8080
