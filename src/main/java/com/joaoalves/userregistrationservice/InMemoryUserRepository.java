@@ -18,7 +18,6 @@ public class InMemoryUserRepository implements UserRepository {
 
     @Override
     public User findByEmail(String email) {
-        users.getOrDefault(email, null);
-        return null;
+        return users.getOrDefault(email, null);
     }
 }

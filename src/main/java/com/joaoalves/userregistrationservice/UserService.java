@@ -10,11 +10,14 @@ public class UserService {
     public UserService(UserRepository userRepository, NotificationService notificationService) {
         this.userRepository = userRepository;
         this.notificationService = notificationService;
-        System.out.println("UserService created");
     }
 
     public void registerUser(User user) {
+        if (userRepository.findByEmail(user.getEmail()) != null) {
+            throw new IllegalArgumentException("User with email " + user.getEmail() + " already exists!");
+        }
+
         userRepository.save(user);
-        notificationService.send("User registado. Email", user.getEmail());
+        notificationService.send("User registered. Email", user.getEmail());
     }
 }

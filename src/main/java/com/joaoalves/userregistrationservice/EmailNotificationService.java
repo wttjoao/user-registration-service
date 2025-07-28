@@ -9,7 +9,7 @@ public class EmailNotificationService implements NotificationService {
     private String host;
 
     @Value("${mail.port}")
-    private int port;
+    private String port;
 
     @Override
     public void send(String message, String recipientEmail) {
